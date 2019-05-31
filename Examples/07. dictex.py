@@ -92,3 +92,10 @@ print(x)
 x=tdic.items()                               #x is now a tuple for key value pairs 
 print(x)                                     #op : dict_items([('key','value'),('key','value')...])
 
+dic = dict()
+dicti = dict()
+print(dic)
+x=2
+dicti[x]=dict.get(dic,x,0)+1                         #get(KEY,DEFAULT) #if key exists, add one to its value, or else make a new key with DEFAULT value.
+print(dicti)
+#The get() will not give traceback if key is not present in the dictionary, infact it will make one if it doesnt already exists.
