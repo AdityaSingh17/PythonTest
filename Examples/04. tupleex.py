@@ -29,8 +29,14 @@ print("the occurence of banana is "+str(y))
 x=len(mtup)
 print(x)
 
+x,y = 4,5                           #Tupple assignment!
+
 #we cannot add items to tuple, once its been created! 
 #also we cannot remove items from tuples, but we can delete the entire tuple !
 
 del mtup
 #print(mtup)        will raise an error! coz mtup existance is deleted!
+
+ntup = (5,0,1)
+ntups = (1,100,100000)
+print(ntups>ntup)           #Checks only for the significant(left most) value, if that is true doesnt check the following values.
