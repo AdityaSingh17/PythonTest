@@ -16,5 +16,7 @@ a=len(x)
 print("Length ="+str(a)) #since length is an int, it has to be typecasted to string to print!
 print("To replace "+x.replace('H','K'))
 print("To slipt the string based on some character"+str(x.split(','))) #returns ['Hello','World'], has to be typecasted to str
+#The spilit function returns a list. (splits by default on white spaces.)
+#multiple spaces in split are treated as one.
 pos = x.find('a')                           #To find the index of a character.
 print(pos)

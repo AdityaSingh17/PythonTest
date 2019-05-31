@@ -2,6 +2,7 @@
 List is a collection that is ordered and changeable, it allows duplicate members!
 List are written in square brackets []
 List is same as arrays in python.
+#LIST ALSO SUPPORTS SLICING
 """
 mlist = ["apple","banana","orange","mango","banana","apple"] #alter mlist = list(("apple","banana",....)) #list() is a constructor
 print(mlist)
@@ -13,7 +14,7 @@ for x in mlist:                                     #loop through a list
     count+=1
 print("Total item = "+str(count))                   #count using loop
 print("Length of list = "+str(len(mlist)))          #built in for length of list
-mlist.append("mango")                                #adds in end
+mlist.append("mango")                                #adds in end,maintains order.
 print(mlist)
 mlist.insert(2,"blackcurrant")                       #adds at speicific pos, all elements shifted right
 print(mlist)
@@ -46,3 +47,9 @@ print(mlist)
 
 y=mlist.index("coke")                               #returns the first occurence index of coke
 print(y)
+
+mlist = ["apple","banana","orange","mango","banana","apple"]
+print(len(mlist))       #Prints the length
+print(sum(mlist))       #Prints the sum.
+print(max(mlist))       #Prints the max element
+print(min(mlist))       #Prints the min element
