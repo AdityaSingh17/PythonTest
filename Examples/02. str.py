@@ -1,5 +1,6 @@
 """
-This is a python code for getting a string and making some alterations to it
+This is a python code for getting a string and storing alterations made to it.
+Strings are immutable (cannot be changed!)
 """
 print("Enter the sring\n")
 
