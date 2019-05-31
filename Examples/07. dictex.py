@@ -36,7 +36,7 @@ for x in tdic:
 # for x in tdic.values(): print(x)
 
 for x,y in tdic.items():
-    print(x,y)                                              #print all items(keys and values)
+    print(x,y)                                              #print all items(keys and values) #The key value pairs are a list of tuples!
 
 
 if "apple" in tdic:
