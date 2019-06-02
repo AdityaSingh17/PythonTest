@@ -10,7 +10,7 @@ class mclass:                                                           #class d
         self.a = input()
         print("new value of a = "+str(self.a))
 
-obj = mclass()                                                          #object creation
+obj = mclass()                                                          #object creation (initialization)
 print(obj.a)                                                            #print the initial value
 obj.mfunc()                                                             #call the method to change value of the function
 
@@ -23,9 +23,12 @@ The parameter "self" in the above example is one such name, the reference may be
 
 
 class stu:
-    def __init__(abc,name,usn):                                         #abc is the reference name
-        abc.name = name
-        abc.usn = usn
+    def __init__(self,name,usn):                                        #We are creating a constructor. Used to initilize class variables.
+        self.name = name
+        self.usn = usn
+
+    def __del__(self):                                                  #Destructor, it is called automatically when scope is over or the variable is reassigned with another value.
+        print("I am destructed :((")
 
 print("direct passing")
 a = stu("adi",19)
@@ -35,9 +38,12 @@ print("passing user inputs")
 x = str(input("Enter the student name : "))
 y = int(input("Enter the student usn : "))
 
-a = stu(x,y)
+a = stu(x,y)                            #same as stu.__init__(a,x,y)    
 print(a.name,a.usn)
-        
+
+#a = 45                 This will call the destructor
+#print(a)               First the destructor is printed, then this a value(45) is printed.
+
 a.name = "ADITYA SINGH"                                                  #modifying object values
 print(a.name,a.usn)
 
@@ -46,3 +52,19 @@ print(a.usn)            #since we deleted the name, calling a.name will raise er
 
 del a                                                                    #deleting the object
 #print(a.name,a.usn)    will cause errors.
+
+"""
+INHERITANCE
+"""
+class zclass:                                                          
+    a=10                                                                
+    def mfunc(self):                                                    
+        print("the value stored in a is ="+str(self.a))                 
+
+class nclass(zclass):                                   #nclass will inherit mclass
+        print("Hello, i am in class nclass")
+        
+a = nclass()                            #made object for SUBCLASS, it will have access to methods and functions of both derived class and the base class.
+a.mfunc()
+#First the print of nclass is called, then the mfunc() of zclass is called.
+#If the subclass has no constructor, it calls the base class' constructor.
